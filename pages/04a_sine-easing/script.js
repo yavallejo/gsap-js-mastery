@@ -24,3 +24,26 @@ window.addEventListener("scroll", () => {
         button.classList.remove("show");
     }
 });
+
+button.addEventListener("mouseenter", () => {
+    gsap.to(button, {
+        scale: 1.5,
+        duration: 1,
+        ease: "sine.inOut",
+    });
+});
+
+button.addEventListener("mouseleave", () => {
+    gsap.to(button, {
+        scale: 1,
+        duration: 1,
+        ease: "sine.inOut",
+    });
+});
+
+button.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+    });
+});
